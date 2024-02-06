@@ -1,0 +1,31 @@
+/* Color pallete*/
+:root {
+  --white: #fff;
+  --black: #000;
+  --primary: #cdceaacc;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 16px;
+  font-family: "Glory", sans-serif;
+}
+
+.nametitle {
+  text-align: left;
+  font-size: 2rem;
+  color: var(--black);
+  text-transform: uppercase;
+  width: 20rem; /* 1 rem = 10 px */
+  font-family: "Protest Guerrilla", sans-serif;
+}
+.nametitle span {
+  color: rgb(132, 75, 185);
+  font-size: 2em;
+}
+
+.imgfirma {
+  align-self: center;
+}
