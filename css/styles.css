@@ -2,7 +2,8 @@
 :root {
   --white: #fff;
   --black: #000;
-  --primary: #cdceaacc;
+  --primary: #3f1661cc;
+  --secundario: rgb(241, 156, 87);
 }
 
 html {
@@ -14,11 +15,10 @@ body {
 }
 
 .nametitle {
-  text-align: left;
+  text-align: center;
   font-size: 2rem;
   color: var(--black);
   text-transform: uppercase;
-  width: 20rem; /* 1 rem = 10 px */
   font-family: "Protest Guerrilla", sans-serif;
 }
 .nametitle span {
@@ -26,6 +26,41 @@ body {
   font-size: 2em;
 }
 
-.imgfirma {
-  align-self: center;
+.container {
+  max-width: 120rem;
+  margin: 0px auto 0px auto;
+  /* o margin-top: 20px;
+  margin-bottom: 0px;
+  margin-right: auto;
+  margin-left: auto;*/
+}
+.nav-bg {
+  background-color: var(--secundario);
+}
+
+.main-nav {
+  background-color: var(--secundario);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.main-nav a {
+  color: var(--primary);
+  text-decoration-line: none;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 }
