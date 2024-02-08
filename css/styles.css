@@ -8,6 +8,13 @@
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 body {
   font-size: 16px;
@@ -15,7 +22,6 @@ body {
 }
 
 .nametitle {
-  text-align: center;
   font-size: 2rem;
   color: var(--black);
   text-transform: uppercase;
@@ -28,22 +34,23 @@ body {
 
 .container {
   max-width: 120rem;
-  margin: 0px auto 0px auto;
+  margin: 5px auto 0px auto;
   /* o margin-top: 20px;
   margin-bottom: 0px;
   margin-right: auto;
   margin-left: auto;*/
 }
 .nav-bg {
-  background-color: var(--secundario);
+  background-color: var(--white);
 }
 
 .main-nav {
-  background-color: var(--secundario);
+  background-color: var(--white);
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  align-items: center;
 }
 
 .main-nav a {
@@ -54,13 +61,56 @@ body {
 }
 
 .main-nav a:hover {
-  color: var(--white);
+  color: var(--secundario);
 }
 
 @media (max-width: 768px) {
   .main-nav {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    align-items: start;
+    gap: 0.2rem;
   }
+}
+
+.main-info {
+  position: relative;
+  background-image: url(../Images/portfolio/f8.jpg);
+  background-size: 65rem;
+  height: 600px;
+  background-repeat: no-repeat;
+}
+
+.main-info-content {
+  position: absolute;
+  /*background-color: #140f0fb7;*/
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-info-content h3,
+.main-info-content a,
+.main-info-content p {
+  margin: 20px 0px 0px 600px;
+  font-size: 3rem;
+}
+.main-info-content h2 {
+  margin: 20px 0px 0px 600px;
+  font-size: 3.5rem;
+  font-style: oblique;
+  text-transform: uppercase;
+}
+
+.location-icon p {
+  margin: 20px 0px 0px 600px;
+  font-size: 2rem;
+}
+.location-icon svg {
+  margin: 20px 0px 0px 600px;
 }
